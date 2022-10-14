@@ -31,7 +31,7 @@ class Vcf:
     for key in file_names:            
         file_names[key].close()
 
-vcf = Vcf("test.vcf")
+vcf = Vcf("test_1.vcf")
 vcf.vcfParse()
 
 print(datetime.now() - start_time)
