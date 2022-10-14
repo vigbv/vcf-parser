@@ -12,13 +12,16 @@ class Vcf:
     file_names = {} # capture file names to manage file handlers
     
     with open(self.file_name) as file:
-        for line in file: # loop through each line of input vcf file
+        for line in file: # loop through each line of input VCF file
             line = line.rstrip()
             if line.startswith("##"): # process metadata
                 metadata.append(line)
             elif line.startswith("#CHROM"): # process header columns
                 header_line = re.split(r"\t+", line)
                 num_columns = len(header_line)
+                if num_columns == 10: # skip splitting if VCF file has only one sample
+                    print("Only one sample detected, skipping splitting...")
+                    break
             else:
                 for sample_num in range(9, num_columns): # loop through samples and write to output 
                     sample_name = header_line[sample_num]

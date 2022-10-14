@@ -1,0 +1,16 @@
+##fileformat=VCFv4.1
+##reference=GRCh37
+## ICL-12254: 3 pairs of variants NHS Cardiff site considers compound heterozygous per their process but are not conventional for testing
+## USH2A is positive compound heterozygous control (currently classified as CH by QCI), RUNX1 is negative control (both variants from one parent)
+##INFO=<ID=pdot,Number=.,Type=String,Description="Variant description">
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO	FORMAT	RV001P	RV001M	RV001F
+1	216420460	.	C	A	100	PASS	gene=USH2A:variant=NM_206993.4(USH2A):c.2276G>T (p.C759F):clinvarID=2356	GT:DO	1/1:200	0/0:300	0/0:400
+1	216246634	.	C	T	100	PASS	gene=USH2A:variant=NM_206993.4(USH2A):c.5581G>A (p.G1861S):clinvarID=48535	GT:DO	./.:200	0/1:300	1/1:400
+2	122288506	rs188343279	G	A	100	PASS	gene=U4atac,CLASP1:variant=NR_023343.1(U4atac):n.51G>A,NM_015282.2(CLASP1):c.196-605C>T:clinvarID=30178:disease=MICROCEPHALIC OSTEODYSPLASTIC PRIMORDIAL DWARFISM TYPE I:OMIM=Pathogenic	GT:DO	0/1:200	0/1:300	./.:400
+2	122288566	rs763500364	G	T	100	PASS	gene=U4atac,CLASP1:variant=NR_023343.1(U4atac):n.111G>A,NM_015282.2(CLASP1):c.196-665C>T:clinvarID=30181:disease=MICROCEPHALIC OSTEODYSPLASTIC PRIMORDIAL DWARFISM TYPE I:OMIM=Pathogenic	GT:DO	0/1:200	./.:300	0/1:400
+15	89865989	.	C	G	100	PASS	gene=POLG:variant=NM_002693.2(POLG):c.2410G>C (p.A804P):clinvarID=none	GT:DO	0/1:200	./.:300	0/1:400
+15	89870432	rs113994095	C	T	100	PASS	gene=POLG:variant=NM_002693.2(POLG):c.1399G>A (p.A467T):clinvarID=13496:disease=Progressive sclerosing poliodystrophy:ClinVar=Pathogenic	GT:DO	0/1:200	0/1:300	./.:400
+17	56284751	.	CAGGGAGAAATTCAAATTTCCGCTCTGCCA	C	100	PASS	gene=MKS1:variant=NM_017777.3(MKS1):c.1274-201_1274-173del:clinvarID=none	GT:DO	0/1:200	0/1:300	0/0:400
+17	56293449	rs386834048	C	T	100	PASS	gene=MKS1:variant=NM_017777.3(MKS1):c.417G>A:clinvarID=1392:disease=Meckel syndrome type 1:ClinVar=Conflicting	GT:DO	0/1:200	0/0:300	0/1:400
+21	36231783	.	G	A	100	PASS	gene=RUNX1:variant=NM_001001890.3(RUNX1):c.520C>T (p.R174X):clinvarID=376018	GT:DO	1/1:200	./.:300	0/1:400
+21	36252865	.	C	T 	100	PASS	gene=RUNX1:variant=NM_001001890.3(RUNX1):c.497G>A (p.G166Q):clinvarID=417961	GT:DO	0/0:200	0/0:300	0/1:400
