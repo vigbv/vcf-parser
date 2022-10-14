@@ -1,4 +1,5 @@
 import re
+import sys
 from datetime import datetime
 
 start_time = datetime.now()
@@ -23,15 +24,16 @@ class Vcf:
                     sample_name = header_line[sample_num]
                     if sample_name not in file_names:
                         file_names[sample_name] =  open(sample_name + '.vcf', 'w')
-                        file_names[sample_name].write("\n".join(metadata) + "\n" + "\t".join(header_line[0:8]) + "\t" + sample_name + "\n")
+                        file_names[sample_name].write("\n".join(metadata) + "\n" + "\t".join(header_line[0:9]) + "\t" + sample_name + "\n")
                     
                     split_line = re.split(r"\t+", line)
-                    file_names[sample_name].write("\t".join(split_line[0:8]) + "\t" + split_line[sample_num] + "\n")
+                    file_names[sample_name].write("\t".join(split_line[0:9]) + "\t" + split_line[sample_num] + "\n")
                     
     for key in file_names:            
         file_names[key].close()
 
-vcf = Vcf("test_1.vcf")
+vcf_file = sys.argv[1]
+vcf = Vcf(vcf_file)
 vcf.vcfParse()
 
-print(datetime.now() - start_time)
+print("Execution time -----> " + str(datetime.now() - start_time))

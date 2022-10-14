@@ -3,6 +3,6 @@
 ## ICL-12254: 3 pairs of variants NHS Cardiff site considers compound heterozygous per their process but are not conventional for testing
 ## USH2A is positive compound heterozygous control (currently classified as CH by QCI), RUNX1 is negative control (both variants from one parent)
 ##INFO=<ID=pdot,Number=.,Type=String,Description="Variant description">
-#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO	RV001F
-1	216420460	.	C	A	100	PASS	gene=USH2A:variant=NM_206993.4(USH2A):c.2276G>T (p.C759F):clinvarID=2356	0/0:400
-1	216246634	.	C	T	100	PASS	gene=USH2A:variant=NM_206993.4(USH2A):c.5581G>A (p.G1861S):clinvarID=48535	1/1:400
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO	FORMAT	RV001F
+1	216420460	.	C	A	100	PASS	gene=USH2A:variant=NM_206993.4(USH2A):c.2276G>T (p.C759F):clinvarID=2356	GT:DO	0/0:400
+1	216246634	.	C	T	100	PASS	gene=USH2A:variant=NM_206993.4(USH2A):c.5581G>A (p.G1861S):clinvarID=48535	GT:DO	1/1:400
